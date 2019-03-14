@@ -8,7 +8,7 @@ import os
 def head_to_head(player1Name,player2Name):
 
     template = Image.open('static/ATP_Static_V2.png')
-     player1image= Image.open(urlencode('static/players/' + str(player1Name) + '.jpg'))
+    player1image= Image.open(urlencode('static/players/' + str(player1Name) + '.jpg'))
     player2image = Image.open(urlencode('static/players/' + str(player2Name) + '.jpg'))
     r_al = 1080 - len(player2Name)
     template.paste(player1image, (100, 238))
