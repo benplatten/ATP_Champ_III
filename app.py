@@ -12,11 +12,11 @@ if ON_HEROKU:
     # get the heroku port
     PORT = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
 else:
-    PORT = 3000
+    PORT = 5000
 
 
-#DEBUG = True
-HOST = '0.0.0.0'
+DEBUG = True
+HOST = '127.0.0.1'
 
 
 app = Flask(__name__)
