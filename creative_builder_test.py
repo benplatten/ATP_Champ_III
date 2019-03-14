@@ -1,6 +1,7 @@
 from PIL import Image, ImageDraw, ImageFont
 from datetime import datetime
 import os
+import urllib.parse
 
 
 
@@ -8,13 +9,13 @@ import os
 def head_to_head(player1Name,player2Name):
 
     template = Image.open('static/ATP_Static_V2.png')
-    player1image= Image.open(urlencode('static/players/' + str(player1Name) + '.jpg'))
-    player2image = Image.open(urlencode('static/players/' + str(player2Name) + '.jpg'))
+    player1image= Image.open(urllib.parse.urlencode('static/players/' + str(player1Name) + '.jpg'))
+    player2image = Image.open(urllib.parse.urlencode('static/players/' + str(player2Name) + '.jpg'))
     r_al = 1080 - len(player2Name)
     template.paste(player1image, (100, 238))
     template.paste(player2image, (r_al, 238))
     # will the images include name?
-    location = urlencode('static/new_creative/'+'h2h'+'_'+player1Name+'_'+player2Name+'.png')
+    location = urllib.parse.urlencode('static/new_creative/'+'h2h'+'_'+player1Name+'_'+player2Name+'.png')
     template.save(location)
     return location
 
