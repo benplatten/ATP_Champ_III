@@ -9,8 +9,8 @@ import urllib.parse
 def head_to_head(player1Name,player2Name):
     
     template = Image.open('static/ATP_Static_V2.png')
-    player1image= Image.open('static/players/' + str(player1Name) + '.jpg')
-    player2image = Image.open('static/players/' + str(player2Name) + '.jpg')
+    player1image= Image.open('static/players/' + str(player1Name) + '.JPG')
+    player2image = Image.open('static/players/' + str(player2Name) + '.JPG')
     r_al = 1080 - len(player2Name)
     template.paste(player1image, (100, 238))
     template.paste(player2image, (r_al, 238))
