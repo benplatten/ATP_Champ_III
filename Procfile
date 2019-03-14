@@ -1,1 +1,1 @@
-web: gunicorn ATP_champ_III.wsgi --log-file -
+web: gunicorn app.wsgi --log-file -
