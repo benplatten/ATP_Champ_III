@@ -1,15 +1,23 @@
 import os 
-from pml import app
+
 
 from flask import Flask, render_template, request
 
 from creative_builder_test import head_to_head
 
 
+ON_HEROKU = os.environ.get('ON_HEROKU')
+
+if ON_HEROKU:
+    # get the heroku port
+    PORT = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
+else:
+    PORT = 3000
+
 
 DEBUG = True
 HOST = '0.0.0.0'
-PORT = int(os.environ.get('PORT', 5000))
+
 
 app = Flask(__name__)
 
