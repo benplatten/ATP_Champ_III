@@ -15,7 +15,7 @@ else:
     PORT = 3000
 
 
-DEBUG = True
+#DEBUG = True
 HOST = '0.0.0.0'
 
 
