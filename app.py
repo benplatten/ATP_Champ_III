@@ -1,10 +1,15 @@
+import os 
+from pml import app
+
 from flask import Flask, render_template, request
 
 from creative_builder_test import head_to_head
 
+
+
 DEBUG = True
-HOST = '127.0.0.1'
-PORT = 5000
+HOST = '0.0.0.0'
+PORT = int(os.environ.get('PORT', 5000))
 
 app = Flask(__name__)
 
