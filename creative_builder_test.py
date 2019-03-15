@@ -6,53 +6,66 @@ import urllib.parse
 
 
 
-def head_to_head(player1Name,player2Name):
+def head_to_head(player1Name,player2Name,match_date):
     
-    template = Image.open('static/ATP_Static_V2.png')
-    player1image= Image.open('static/players/' + str(player1Name) + '.JPG')
-    player2image = Image.open('static/players/' + str(player2Name) + '.JPG')
-    r_al = 1080 - len(player2Name)
-    template.paste(player1image, (100, 238))
-    template.paste(player2image, (r_al, 238))
-    # will the images include name?
-    location = 'static/new_creative/'+'h2h'+'_'+player1Name+'_'+player2Name+'.png'
+    player1Name = player1Name.upper()
+    player2Name = player2Name.upper()
+    match_date = match_date.upper()
+
+    template = Image.open('static/01 PvP.png')
+
+    font_format = ImageFont.truetype("static/Gilroy/GilroyBlack.otf", 41)
+    font_format_date = ImageFont.truetype("static/Gilroy/Gilroy-Bold.otf", 23)
+
+    draw = ImageDraw.Draw(template)
+    p1width, p1height = draw.textsize(player1Name, font=font_format)
+    mdwidth, mdheight = draw.textsize(match_date, font=font_format_date)
+
+    ## factor in white space
+   
+    draw.text((368-p1width,333), player1Name, fill="#290045",font=font_format)
+    draw.text((430,333), player2Name, fill="#290045",font=font_format)
+    draw.text((791-mdwidth,390), match_date, fill="#290045",font=font_format_date)
+
+    location = 'static/new_creative/'+'h2h'+'_'+player1Name+'_'+player2Name+'_'+match_date+'_'+'.png'
     template.save(location)
     return location
 
-    #print('static/players/' + str(player2Name) + '.jpg')
+
 
 
 
 #
-def set_score():
-    template = Image.open('static/ATP_Static_Stats.png')
-    set_number = "Set " + input("Enter set number: ") +" score"
-    home_score = input("Enter home set score: ")
-    away_score = input("Enter away set score: ")
+def set_score(player1Name,player2Name,set_scores_string):
 
+    player1Name = player1Name.upper()
+    player2Name = player2Name.upper()
+    set_scores_string = set_scores_string.upper()
 
-    #format
+    template = Image.open('static/02 Set Scores.png')
 
-    fontsFolder = 'C:\Windows\Fonts'
-    font_format = ImageFont.truetype(os.path.join(fontsFolder, 'CHILLER.ttf'), 80)
-
-
-    #paste in location
+    font_format = ImageFont.truetype("static/Gilroy/GilroyBlack.otf", 41)
+    font_format_scores = ImageFont.truetype("static/Gilroy/Gilroy-Bold.otf", 23)
 
     draw = ImageDraw.Draw(template)
-    draw.text((500,100), set_number, fill="red",font=font_format)
-    draw.text((400,300), home_score, fill="red",font=font_format)
-    draw.text((800,300), away_score, fill="red",font=font_format)
+    p1width, p1height = draw.textsize(player1Name, font=font_format)
+    swidth, sheight = draw.textsize(set_scores_string, font=font_format_scores)
 
-    #right align test
-    name = "Nadal"
-    r_al = 1080 - len(name)
-    igr = Image.open('static/RepriseBlack.jpg')
-    template.paste(igr, (r_al, 238))
+    ## factor in white space
+   
+    draw.text((368-p1width,333), player1Name, fill="#290045",font=font_format)
+    draw.text((430,333), player2Name, fill="#290045",font=font_format)
+    draw.text((400-(swidth/2),390), set_scores_string, fill="#FFFFFF",font=font_format_scores)
+
+    location = 'static/new_creative/'+'h2h'+'_'+player1Name+'_'+player2Name+'_'+set_scores_string+'_'+'.png'
+    template.save(location)
+    return location
 
 
-    #save / return output
-    template.show()
+
+
+#def winner():
+
 
 def post_match_card():
 
@@ -96,7 +109,7 @@ def select_template():
     
 
 
-#head_to_head('Rafael Nadal','Roger Federer')
+#head_to_head('Rafael Nadal','Roger Federer','tomorrow')
 #select_template()
 
 
