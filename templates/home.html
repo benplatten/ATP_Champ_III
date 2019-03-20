@@ -13,283 +13,469 @@
    <body>
       <form method='post' action="{{ url_for('receive_data') }}">
          <div class="container">
-         <div class="row">
-            <div class="col-xs-12 mx-auto p-3 mb-2 bg-light text-dark">
-               <h3 class="display-3">ATP Champ</h3>
-               <p class="lead">Content Builder</p>
+         <div class="row" style="background-color: #542c90;">
+            <div class="col-xs-12 mx-auto p-3 mb-2" style="background-color: #542c90; color: white; font-family: Arial;">
+               <h4><strong>REPRISE DYNAMIC CONTENT BUILDER</strong></h4>
+               <p class="lead">Amazon Prime ATP Championship</p>
                <div id="flashMessage">
                   Your changes have been saved!
                </div>
             </div>
          </div>
-         <div class="row">
+         <div class="row form-group" style="padding-top: 20px;">
             <div class="col-md-6" style="float: left;">
-               <div class="form-group">
-                  <select class="custom-select" id="template_type" name='template_type'>
-                     <option selected>Choose a template</option>
-                     <option value="1">Head2Head</option>
-                     <option value="2">Set Scores</option>
-                     <option value="3">Winner</option>
-                     <option value="4">Post Match Stats</option>
-                  </select>
-                  <br>
-                  <br>
-                  <div class="dropdown">
-                     <input type="hidden" name="player1Name" id="player1Field">
-                     <input type="hidden" name="player2Name" id="player2Field">
-                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="player1Name" name='player1Name'>Dropdown Example
-                     <span class="caret"></span></button>
-                     <ul class="dropdown-menu">
-                        <input class="form-control" id="player1Input" type="text" placeholder="Search..">
-                        <li><a class="dropdown-item" data-value="Novak Djokovic">Novak Djokovic</a></li>
-                        <li><a class="dropdown-item" data-value="Rafael Nadal">Rafael Nadal</a></li>
-                        <li><a class="dropdown-item" data-value="Alexander Zverev">Alexander Zverev</a></li>
-                        <li><a class="dropdown-item" data-value="Juan Martin del Potro">Juan Martin del Potro</a></li>
-                        <li><a class="dropdown-item" data-value="Kevin Anderson">Kevin Anderson</a></li>
-                        <li><a class="dropdown-item" data-value="Roger Federer">Roger Federer</a></li>
-                        <li><a class="dropdown-item" data-value="Kei Nishikori">Kei Nishikori</a></li>
-                        <li><a class="dropdown-item" data-value="Dominic Thiem">Dominic Thiem</a></li>
-                        <li><a class="dropdown-item" data-value="John Isner">John Isner</a></li>
-                        <li><a class="dropdown-item" data-value="Marin Cilic">Marin Cilic</a></li>
-                        <li><a class="dropdown-item" data-value="Karen Khachanov">Karen Khachanov</a></li>
-                        <li><a class="dropdown-item" data-value="Stefanos Tsitsipas">Stefanos Tsitsipas</a></li>
-                        <li><a class="dropdown-item" data-value="Borna Coric">Borna Coric</a></li>
-                        <li><a class="dropdown-item" data-value="Milos Raonic">Milos Raonic</a></li>
-                        <li><a class="dropdown-item" data-value="Fabio Fognini">Fabio Fognini</a></li>
-                        <li><a class="dropdown-item" data-value="Daniil Medvedev">Daniil Medvedev</a></li>
-                        <li><a class="dropdown-item" data-value="Lucas Pouille">Lucas Pouille</a></li>
-                        <li><a class="dropdown-item" data-value="Roberto Bautista Agut">Roberto Bautista Agut</a></li>
-                        <li><a class="dropdown-item" data-value="Marco Cecchinato">Marco Cecchinato</a></li>
-                        <li><a class="dropdown-item" data-value="Diego Schwartzman">Diego Schwartzman</a></li>
-                        <li><a class="dropdown-item" data-value="David Goffin">David Goffin</a></li>
-                        <li><a class="dropdown-item" data-value="Nikoloz Basilashvili">Nikoloz Basilashvili</a></li>
-                        <li><a class="dropdown-item" data-value="Pablo Carreno Busta">Pablo Carreno Busta</a></li>
-                        <li><a class="dropdown-item" data-value="Grigor Dimitrov">Grigor Dimitrov</a></li>
-                        <li><a class="dropdown-item" data-value="Denis Shapovalov">Denis Shapovalov</a></li>
-                        <li><a class="dropdown-item" data-value="Fernando Verdasco">Fernando Verdasco</a></li>
-                        <li><a class="dropdown-item" data-value="Richard Gasquet">Richard Gasquet</a></li>
-                        <li><a class="dropdown-item" data-value="Alex de Minaur">Alex de Minaur</a></li>
-                        <li><a class="dropdown-item" data-value="Kyle Edmund">Kyle Edmund</a></li>
-                        <li><a class="dropdown-item" data-value="Frances Tiafoe">Frances Tiafoe</a></li>
-                        <li><a class="dropdown-item" data-value="Gilles Simon">Gilles Simon</a></li>
-                        <li><a class="dropdown-item" data-value="Philipp Kohlschreiber">Philipp Kohlschreiber</a></li>
-                        <li><a class="dropdown-item" data-value="Gael Monfils">Gael Monfils</a></li>
-                        <li><a class="dropdown-item" data-value="Steve Johnson">Steve Johnson</a></li>
-                        <li><a class="dropdown-item" data-value="Jeremy Chardy">Jeremy Chardy</a></li>
-                        <li><a class="dropdown-item" data-value="John Millman">John Millman</a></li>
-                        <li><a class="dropdown-item" data-value="Andreas Seppi">Andreas Seppi</a></li>
-                        <li><a class="dropdown-item" data-value="Martin Klizan">Martin Klizan</a></li>
-                        <li><a class="dropdown-item" data-value="Joao Sousa">Joao Sousa</a></li>
-                        <li><a class="dropdown-item" data-value="Taylor Fritz">Taylor Fritz</a></li>
-                        <li><a class="dropdown-item" data-value="Nicolas Jarry">Nicolas Jarry</a></li>
-                        <li><a class="dropdown-item" data-value="Dusan Lajovic">Dusan Lajovic</a></li>
-                        <li><a class="dropdown-item" data-value="Malek Jaziri">Malek Jaziri</a></li>
-                        <li><a class="dropdown-item" data-value="Pierre-Hugues Herbert">Pierre-Hugues Herbert</a></li>
-                        <li><a class="dropdown-item" data-value="Matthew Ebden">Matthew Ebden</a></li>
-                        <li><a class="dropdown-item" data-value="Adrian Mannarino">Adrian Mannarino</a></li>
-                        <li><a class="dropdown-item" data-value="Marton Fucsovics">Marton Fucsovics</a></li>
-                        <li><a class="dropdown-item" data-value="Sam Querrey">Sam Querrey</a></li>
-                        <li><a class="dropdown-item" data-value="Leonardo Mayer">Leonardo Mayer</a></li>
-                        <li><a class="dropdown-item" data-value="Hyeon Chung">Hyeon Chung</a></li>
-                        <li><a class="dropdown-item" data-value="Jan-Lennard Struff">Jan-Lennard Struff</a></li>
-                        <li><a class="dropdown-item" data-value="Damir Dzumhur">Damir Dzumhur</a></li>
-                        <li><a class="dropdown-item" data-value="Matteo Berrettini">Matteo Berrettini</a></li>
-                        <li><a class="dropdown-item" data-value="Robin Haase">Robin Haase</a></li>
-                        <li><a class="dropdown-item" data-value="Mikhail Kukushkin">Mikhail Kukushkin</a></li>
-                        <li><a class="dropdown-item" data-value="Marius Copil">Marius Copil</a></li>
-                        <li><a class="dropdown-item" data-value="Stan Wawrinka">Stan Wawrinka</a></li>
-                        <li><a class="dropdown-item" data-value="Benoit Paire">Benoit Paire</a></li>
-                        <li><a class="dropdown-item" data-value="Guido Pella">Guido Pella</a></li>
-                        <li><a class="dropdown-item" data-value="Jordan Thompson">Jordan Thompson</a></li>
-                        <li><a class="dropdown-item" data-value="Peter Gojowczyk">Peter Gojowczyk</a></li>
-                        <li><a class="dropdown-item" data-value="Feliciano Lopez">Feliciano Lopez</a></li>
-                        <li><a class="dropdown-item" data-value="Denis Kudla">Denis Kudla</a></li>
-                        <li><a class="dropdown-item" data-value="Cameron Norrie">Cameron Norrie</a></li>
-                        <li><a class="dropdown-item" data-value="Aljaz Bedene">Aljaz Bedene</a></li>
-                        <li><a class="dropdown-item" data-value="Nick Kyrgios">Nick Kyrgios</a></li>
-                        <li><a class="dropdown-item" data-value="Mischa Zverev">Mischa Zverev</a></li>
-                        <li><a class="dropdown-item" data-value="Yoshihito Nishioka">Yoshihito Nishioka</a></li>
-                        <li><a class="dropdown-item" data-value="Taro Daniel">Taro Daniel</a></li>
-                        <li><a class="dropdown-item" data-value="Guido Andreozzi">Guido Andreozzi</a></li>
-                        <li><a class="dropdown-item" data-value="Albert Ramos-Vinolas">Albert Ramos-Vinolas</a></li>
-                        <li><a class="dropdown-item" data-value="Filip Krajinovic">Filip Krajinovic</a></li>
-                        <li><a class="dropdown-item" data-value="Hubert Hurkacz">Hubert Hurkacz</a></li>
-                        <li><a class="dropdown-item" data-value="Roberto Carballes Baena">Roberto Carballes Baena</a></li>
-                        <li><a class="dropdown-item" data-value="Tennys Sandgren">Tennys Sandgren</a></li>
-                        <li><a class="dropdown-item" data-value="Maximilian Marterer">Maximilian Marterer</a></li>
-                        <li><a class="dropdown-item" data-value="Federico Delbonis">Federico Delbonis</a></li>
-                        <li><a class="dropdown-item" data-value="Ivo Karlovic">Ivo Karlovic</a></li>
-                        <li><a class="dropdown-item" data-value="Tomas Berdych">Tomas Berdych</a></li>
-                     </ul>
+               <div class="row">
+                  <div class="col-md-8">
+                     <label for="template_type">
+                        <h5>Choose a template:</h5>
+                     </label>
+                     <select class="custom-select mb-2" id="template_type" name='template_type' style="width: 100%;">
+                        <option selected value="0">Select Template</option>
+                        <option value="1">Head2Head</option>
+                        <option value="2">Set Scores</option>
+                        <option value="3">Winner</option>
+                        <option value="4">Post Match Stats</option>
+                     </select>
                   </div>
-                  <br>
-                  <div class="dropdown">
-                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="player2Name">Dropdown Example
-                     <span class="caret"></span></button>
-                     <ul class="dropdown-menu">
-                        <input class="form-control" id="player2Input" type="text" placeholder="Search..">
-                        <li><a class="dropdown-item" data-value="Novak Djokovic">Novak Djokovic</a></li>
-                        <li><a class="dropdown-item" data-value="Rafael Nadal">Rafael Nadal</a></li>
-                        <li><a class="dropdown-item" data-value="Alexander Zverev">Alexander Zverev</a></li>
-                        <li><a class="dropdown-item" data-value="Juan Martin del Potro">Juan Martin del Potro</a></li>
-                        <li><a class="dropdown-item" data-value="Kevin Anderson">Kevin Anderson</a></li>
-                        <li><a class="dropdown-item" data-value="Roger Federer">Roger Federer</a></li>
-                        <li><a class="dropdown-item" data-value="Kei Nishikori">Kei Nishikori</a></li>
-                        <li><a class="dropdown-item" data-value="Dominic Thiem">Dominic Thiem</a></li>
-                        <li><a class="dropdown-item" data-value="John Isner">John Isner</a></li>
-                        <li><a class="dropdown-item" data-value="Marin Cilic">Marin Cilic</a></li>
-                        <li><a class="dropdown-item" data-value="Karen Khachanov">Karen Khachanov</a></li>
-                        <li><a class="dropdown-item" data-value="Stefanos Tsitsipas">Stefanos Tsitsipas</a></li>
-                        <li><a class="dropdown-item" data-value="Borna Coric">Borna Coric</a></li>
-                        <li><a class="dropdown-item" data-value="Milos Raonic">Milos Raonic</a></li>
-                        <li><a class="dropdown-item" data-value="Fabio Fognini">Fabio Fognini</a></li>
-                        <li><a class="dropdown-item" data-value="Daniil Medvedev">Daniil Medvedev</a></li>
-                        <li><a class="dropdown-item" data-value="Lucas Pouille">Lucas Pouille</a></li>
-                        <li><a class="dropdown-item" data-value="Roberto Bautista Agut">Roberto Bautista Agut</a></li>
-                        <li><a class="dropdown-item" data-value="Marco Cecchinato">Marco Cecchinato</a></li>
-                        <li><a class="dropdown-item" data-value="Diego Schwartzman">Diego Schwartzman</a></li>
-                        <li><a class="dropdown-item" data-value="David Goffin">David Goffin</a></li>
-                        <li><a class="dropdown-item" data-value="Nikoloz Basilashvili">Nikoloz Basilashvili</a></li>
-                        <li><a class="dropdown-item" data-value="Pablo Carreno Busta">Pablo Carreno Busta</a></li>
-                        <li><a class="dropdown-item" data-value="Grigor Dimitrov">Grigor Dimitrov</a></li>
-                        <li><a class="dropdown-item" data-value="Denis Shapovalov">Denis Shapovalov</a></li>
-                        <li><a class="dropdown-item" data-value="Fernando Verdasco">Fernando Verdasco</a></li>
-                        <li><a class="dropdown-item" data-value="Richard Gasquet">Richard Gasquet</a></li>
-                        <li><a class="dropdown-item" data-value="Alex de Minaur">Alex de Minaur</a></li>
-                        <li><a class="dropdown-item" data-value="Kyle Edmund">Kyle Edmund</a></li>
-                        <li><a class="dropdown-item" data-value="Frances Tiafoe">Frances Tiafoe</a></li>
-                        <li><a class="dropdown-item" data-value="Gilles Simon">Gilles Simon</a></li>
-                        <li><a class="dropdown-item" data-value="Philipp Kohlschreiber">Philipp Kohlschreiber</a></li>
-                        <li><a class="dropdown-item" data-value="Gael Monfils">Gael Monfils</a></li>
-                        <li><a class="dropdown-item" data-value="Steve Johnson">Steve Johnson</a></li>
-                        <li><a class="dropdown-item" data-value="Jeremy Chardy">Jeremy Chardy</a></li>
-                        <li><a class="dropdown-item" data-value="John Millman">John Millman</a></li>
-                        <li><a class="dropdown-item" data-value="Andreas Seppi">Andreas Seppi</a></li>
-                        <li><a class="dropdown-item" data-value="Martin Klizan">Martin Klizan</a></li>
-                        <li><a class="dropdown-item" data-value="Joao Sousa">Joao Sousa</a></li>
-                        <li><a class="dropdown-item" data-value="Taylor Fritz">Taylor Fritz</a></li>
-                        <li><a class="dropdown-item" data-value="Nicolas Jarry">Nicolas Jarry</a></li>
-                        <li><a class="dropdown-item" data-value="Dusan Lajovic">Dusan Lajovic</a></li>
-                        <li><a class="dropdown-item" data-value="Malek Jaziri">Malek Jaziri</a></li>
-                        <li><a class="dropdown-item" data-value="Pierre-Hugues Herbert">Pierre-Hugues Herbert</a></li>
-                        <li><a class="dropdown-item" data-value="Matthew Ebden">Matthew Ebden</a></li>
-                        <li><a class="dropdown-item" data-value="Adrian Mannarino">Adrian Mannarino</a></li>
-                        <li><a class="dropdown-item" data-value="Marton Fucsovics">Marton Fucsovics</a></li>
-                        <li><a class="dropdown-item" data-value="Sam Querrey">Sam Querrey</a></li>
-                        <li><a class="dropdown-item" data-value="Leonardo Mayer">Leonardo Mayer</a></li>
-                        <li><a class="dropdown-item" data-value="Hyeon Chung">Hyeon Chung</a></li>
-                        <li><a class="dropdown-item" data-value="Jan-Lennard Struff">Jan-Lennard Struff</a></li>
-                        <li><a class="dropdown-item" data-value="Damir Dzumhur">Damir Dzumhur</a></li>
-                        <li><a class="dropdown-item" data-value="Matteo Berrettini">Matteo Berrettini</a></li>
-                        <li><a class="dropdown-item" data-value="Robin Haase">Robin Haase</a></li>
-                        <li><a class="dropdown-item" data-value="Mikhail Kukushkin">Mikhail Kukushkin</a></li>
-                        <li><a class="dropdown-item" data-value="Marius Copil">Marius Copil</a></li>
-                        <li><a class="dropdown-item" data-value="Stan Wawrinka">Stan Wawrinka</a></li>
-                        <li><a class="dropdown-item" data-value="Benoit Paire">Benoit Paire</a></li>
-                        <li><a class="dropdown-item" data-value="Guido Pella">Guido Pella</a></li>
-                        <li><a class="dropdown-item" data-value="Jordan Thompson">Jordan Thompson</a></li>
-                        <li><a class="dropdown-item" data-value="Peter Gojowczyk">Peter Gojowczyk</a></li>
-                        <li><a class="dropdown-item" data-value="Feliciano Lopez">Feliciano Lopez</a></li>
-                        <li><a class="dropdown-item" data-value="Denis Kudla">Denis Kudla</a></li>
-                        <li><a class="dropdown-item" data-value="Cameron Norrie">Cameron Norrie</a></li>
-                        <li><a class="dropdown-item" data-value="Aljaz Bedene">Aljaz Bedene</a></li>
-                        <li><a class="dropdown-item" data-value="Nick Kyrgios">Nick Kyrgios</a></li>
-                        <li><a class="dropdown-item" data-value="Mischa Zverev">Mischa Zverev</a></li>
-                        <li><a class="dropdown-item" data-value="Yoshihito Nishioka">Yoshihito Nishioka</a></li>
-                        <li><a class="dropdown-item" data-value="Taro Daniel">Taro Daniel</a></li>
-                        <li><a class="dropdown-item" data-value="Guido Andreozzi">Guido Andreozzi</a></li>
-                        <li><a class="dropdown-item" data-value="Albert Ramos-Vinolas">Albert Ramos-Vinolas</a></li>
-                        <li><a class="dropdown-item" data-value="Filip Krajinovic">Filip Krajinovic</a></li>
-                        <li><a class="dropdown-item" data-value="Hubert Hurkacz">Hubert Hurkacz</a></li>
-                        <li><a class="dropdown-item" data-value="Roberto Carballes Baena">Roberto Carballes Baena</a></li>
-                        <li><a class="dropdown-item" data-value="Tennys Sandgren">Tennys Sandgren</a></li>
-                        <li><a class="dropdown-item" data-value="Maximilian Marterer">Maximilian Marterer</a></li>
-                        <li><a class="dropdown-item" data-value="Federico Delbonis">Federico Delbonis</a></li>
-                        <li><a class="dropdown-item" data-value="Ivo Karlovic">Ivo Karlovic</a></li>
-                        <li><a class="dropdown-item" data-value="Tomas Berdych">Tomas Berdych</a></li>
-                     </ul>
-                  </div>
-                  <br>
-                  <br>
-                  <input type="hidden" name="player2Field" id="player2Field">
-                  <!-- is player2Field needed? -->
-                  <br>
-                  <input type="text" id="set_1" class="setScore" placeholder="Set 1 Score">
-                  <br>
-                  <br>
-                  <input type="text" id="set_2" class="setScore" placeholder="Set 2 Score">
-                  <br>
-                  <br>
-                  <input type="text" id="set_3" class="setScore" placeholder="Set 3 Score">
-                  <input type="hidden" id="set_scores" name="set_scores">
-                  <br>
-                  <br>
-                  <input type="text" id="aces"  placeholder="Aces">
-                  <br>
-                  <br>
-                  <input type="text" id="unforced_errors"  placeholder="Unforced Errors">
-                  <br>
-                  <br>
-                  <select class="custom-select" id="winner" name='winner'>
-                     <option selected>Who won?</option>
-                     <option value="1">Player 1</option>
-                     <option value="2">Player 2</option>
-                  </select>
-                  <br>
-                  <br>
-                  <input type="text" id="match_duration"  placeholder="match_duration">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_aces"  placeholder="player1_aces">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_aces"  placeholder="player2_aces">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_first_serve_winners"  placeholder="player1_first_serve_winners">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_first_serve_winners"  placeholder="player2_first_serve_winners">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_break_points_served"  placeholder="player1_break_points_served">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_break_points_served"  placeholder="player2_break_points_served">
-                  <br>
-                  <br>               
-                  <input type="text" id="player1_break_points_converted"  placeholder="player1_break_points_converted">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_break_points_converted"  placeholder="player2_break_points_converted">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_first_serve_winners"  placeholder="player1_first_serve_winners">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_first_serve_winners"  placeholder="player2_first_serve_winners">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_set_scores"  placeholder="player1_set_scores">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_set_scores"  placeholder="player2_set_scores">
-                  <br>
-                  <br>
-                  <input type="text" id="player1_total_points_won"  placeholder="player1_total_points_won">
-                  <br>
-                  <br>
-                  <input type="text" id="player2_total_points_won"  placeholder="player2_total_points_won">
-                  <br>
-                  <br>
-
-
                </div>
-               <button type="submit" class="btn btn-success" id="submit_button">Submit</button>
+               <!--START HEAD TO HEAD FIELDS-->
+               <div class="row" style="padding-top: 20px;">
+                  <div class="col-md-12" id="playersLabel">
+                     <label>
+                        <h5>Select the players:</h5>
+                     </label>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="dropdown mb-2">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="player1Name" name='player1Name' data-flip="false" data-display="static" style="width: 100%">Select Player 1
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <input class="form-control" id="player1Input" type="text" placeholder="Search..">
+                           <li><a class="dropdown-item" data-value="Djokovic">Novak Djokovic</a></li>
+                           <li><a class="dropdown-item" data-value="Nadal">Rafael Nadal</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Alexander Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="del Potro">Juan Martin del Potro</a></li>
+                           <li><a class="dropdown-item" data-value="Anderson">Kevin Anderson</a></li>
+                           <li><a class="dropdown-item" data-value="Federer">Roger Federer</a></li>
+                           <li><a class="dropdown-item" data-value="Nishikori">Kei Nishikori</a></li>
+                           <li><a class="dropdown-item" data-value="Thiem">Dominic Thiem</a></li>
+                           <li><a class="dropdown-item" data-value="Isner">John Isner</a></li>
+                           <li><a class="dropdown-item" data-value="Cilic">Marin Cilic</a></li>
+                           <li><a class="dropdown-item" data-value="Khachanov">Karen Khachanov</a></li>
+                           <li><a class="dropdown-item" data-value="Tsitsipas">Stefanos Tsitsipas</a></li>
+                           <li><a class="dropdown-item" data-value="Coric">Borna Coric</a></li>
+                           <li><a class="dropdown-item" data-value="Raonic">Milos Raonic</a></li>
+                           <li><a class="dropdown-item" data-value="Fognini">Fabio Fognini</a></li>
+                           <li><a class="dropdown-item" data-value="Medvedev">Daniil Medvedev</a></li>
+                           <li><a class="dropdown-item" data-value="Pouille">Lucas Pouille</a></li>
+                           <li><a class="dropdown-item" data-value="Bautista Agut">Roberto Bautista Agut</a></li>
+                           <li><a class="dropdown-item" data-value="Cecchinato">Marco Cecchinato</a></li>
+                           <li><a class="dropdown-item" data-value="Schwartzman">Diego Schwartzman</a></li>
+                           <li><a class="dropdown-item" data-value="Goffin">David Goffin</a></li>
+                           <li><a class="dropdown-item" data-value="Basilashvili">Nikoloz Basilashvili</a></li>
+                           <li><a class="dropdown-item" data-value="Busta">Pablo Carreno Busta</a></li>
+                           <li><a class="dropdown-item" data-value="Dimitrov">Grigor Dimitrov</a></li>
+                           <li><a class="dropdown-item" data-value="Shapovalov">Denis Shapovalov</a></li>
+                           <li><a class="dropdown-item" data-value="Verdasco">Fernando Verdasco</a></li>
+                           <li><a class="dropdown-item" data-value="Gasquet">Richard Gasquet</a></li>
+                           <li><a class="dropdown-item" data-value="de Minaur">Alex de Minaur</a></li>
+                           <li><a class="dropdown-item" data-value="Edmund">Kyle Edmund</a></li>
+                           <li><a class="dropdown-item" data-value="Tiafoe">Frances Tiafoe</a></li>
+                           <li><a class="dropdown-item" data-value="Simon">Gilles Simon</a></li>
+                           <li><a class="dropdown-item" data-value="Kohlschreiber">Philipp Kohlschreiber</a></li>
+                           <li><a class="dropdown-item" data-value="Monfils">Gael Monfils</a></li>
+                           <li><a class="dropdown-item" data-value="Johnson">Steve Johnson</a></li>
+                           <li><a class="dropdown-item" data-value="Chardy">Jeremy Chardy</a></li>
+                           <li><a class="dropdown-item" data-value="Millman">John Millman</a></li>
+                           <li><a class="dropdown-item" data-value="Seppi">Andreas Seppi</a></li>
+                           <li><a class="dropdown-item" data-value="Klizan">Martin Klizan</a></li>
+                           <li><a class="dropdown-item" data-value="Sousa">Joao Sousa</a></li>
+                           <li><a class="dropdown-item" data-value="Fritz">Taylor Fritz</a></li>
+                           <li><a class="dropdown-item" data-value="Jarry">Nicolas Jarry</a></li>
+                           <li><a class="dropdown-item" data-value="Lajovic">Dusan Lajovic</a></li>
+                           <li><a class="dropdown-item" data-value="Jaziri">Malek Jaziri</a></li>
+                           <li><a class="dropdown-item" data-value="Herbert">Pierre-Hugues Herbert</a></li>
+                           <li><a class="dropdown-item" data-value="Ebden">Matthew Ebden</a></li>
+                           <li><a class="dropdown-item" data-value="Mannarino">Adrian Mannarino</a></li>
+                           <li><a class="dropdown-item" data-value="Fucsovics">Marton Fucsovics</a></li>
+                           <li><a class="dropdown-item" data-value="Querrey">Sam Querrey</a></li>
+                           <li><a class="dropdown-item" data-value="Mayer">Leonardo Mayer</a></li>
+                           <li><a class="dropdown-item" data-value="Chung">Hyeon Chung</a></li>
+                           <li><a class="dropdown-item" data-value="Struff">Jan-Lennard Struff</a></li>
+                           <li><a class="dropdown-item" data-value="Dzumhur">Damir Dzumhur</a></li>
+                           <li><a class="dropdown-item" data-value="Berrettini">Matteo Berrettini</a></li>
+                           <li><a class="dropdown-item" data-value="Haase">Robin Haase</a></li>
+                           <li><a class="dropdown-item" data-value="Kukushkin">Mikhail Kukushkin</a></li>
+                           <li><a class="dropdown-item" data-value="Copil">Marius Copil</a></li>
+                           <li><a class="dropdown-item" data-value="Wawrinka">Stan Wawrinka</a></li>
+                           <li><a class="dropdown-item" data-value="Paire">Benoit Paire</a></li>
+                           <li><a class="dropdown-item" data-value="Pella">Guido Pella</a></li>
+                           <li><a class="dropdown-item" data-value="Thompson">Jordan Thompson</a></li>
+                           <li><a class="dropdown-item" data-value="Gojowczyk">Peter Gojowczyk</a></li>
+                           <li><a class="dropdown-item" data-value="Lopez">Feliciano Lopez</a></li>
+                           <li><a class="dropdown-item" data-value="Kudla">Denis Kudla</a></li>
+                           <li><a class="dropdown-item" data-value="Norrie">Cameron Norrie</a></li>
+                           <li><a class="dropdown-item" data-value="Bedene">Aljaz Bedene</a></li>
+                           <li><a class="dropdown-item" data-value="Kyrgios">Nick Kyrgios</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Mischa Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="Nishioka">Yoshihito Nishioka</a></li>
+                           <li><a class="dropdown-item" data-value="Daniel">Taro Daniel</a></li>
+                           <li><a class="dropdown-item" data-value="Andreozzi">Guido Andreozzi</a></li>
+                           <li><a class="dropdown-item" data-value="Ramos-Vinolas">Albert Ramos-Vinolas</a></li>
+                           <li><a class="dropdown-item" data-value="Krajinovic">Filip Krajinovic</a></li>
+                           <li><a class="dropdown-item" data-value="Hurkacz">Hubert Hurkacz</a></li>
+                           <li><a class="dropdown-item" data-value="Carballes Baena">Roberto Carballes Baena</a></li>
+                           <li><a class="dropdown-item" data-value="Sandgren">Tennys Sandgren</a></li>
+                           <li><a class="dropdown-item" data-value="Marterer">Maximilian Marterer</a></li>
+                           <li><a class="dropdown-item" data-value="Delbonis">Federico Delbonis</a></li>
+                           <li><a class="dropdown-item" data-value="Karlovic">Ivo Karlovic</a></li>
+                           <li><a class="dropdown-item" data-value="Berdych">Tomas Berdych</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-md-6">
+                     <div class="dropdown mb-2">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="player2Name" data-flip="false" data-display="static" style="width: 100%">Select Player 2
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <input class="form-control" id="player2Input" type="text" placeholder="Search..">
+                           <li><a class="dropdown-item" data-value="Djokovic">Novak Djokovic</a></li>
+                           <li><a class="dropdown-item" data-value="Nadal">Rafael Nadal</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Alexander Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="del Potro">Juan Martin del Potro</a></li>
+                           <li><a class="dropdown-item" data-value="Anderson">Kevin Anderson</a></li>
+                           <li><a class="dropdown-item" data-value="Federer">Roger Federer</a></li>
+                           <li><a class="dropdown-item" data-value="Nishikori">Kei Nishikori</a></li>
+                           <li><a class="dropdown-item" data-value="Thiem">Dominic Thiem</a></li>
+                           <li><a class="dropdown-item" data-value="Isner">John Isner</a></li>
+                           <li><a class="dropdown-item" data-value="Cilic">Marin Cilic</a></li>
+                           <li><a class="dropdown-item" data-value="Khachanov">Karen Khachanov</a></li>
+                           <li><a class="dropdown-item" data-value="Tsitsipas">Stefanos Tsitsipas</a></li>
+                           <li><a class="dropdown-item" data-value="Coric">Borna Coric</a></li>
+                           <li><a class="dropdown-item" data-value="Raonic">Milos Raonic</a></li>
+                           <li><a class="dropdown-item" data-value="Fognini">Fabio Fognini</a></li>
+                           <li><a class="dropdown-item" data-value="Medvedev">Daniil Medvedev</a></li>
+                           <li><a class="dropdown-item" data-value="Pouille">Lucas Pouille</a></li>
+                           <li><a class="dropdown-item" data-value="Bautista Agut">Roberto Bautista Agut</a></li>
+                           <li><a class="dropdown-item" data-value="Cecchinato">Marco Cecchinato</a></li>
+                           <li><a class="dropdown-item" data-value="Schwartzman">Diego Schwartzman</a></li>
+                           <li><a class="dropdown-item" data-value="Goffin">David Goffin</a></li>
+                           <li><a class="dropdown-item" data-value="Basilashvili">Nikoloz Basilashvili</a></li>
+                           <li><a class="dropdown-item" data-value="Busta">Pablo Carreno Busta</a></li>
+                           <li><a class="dropdown-item" data-value="Dimitrov">Grigor Dimitrov</a></li>
+                           <li><a class="dropdown-item" data-value="Shapovalov">Denis Shapovalov</a></li>
+                           <li><a class="dropdown-item" data-value="Verdasco">Fernando Verdasco</a></li>
+                           <li><a class="dropdown-item" data-value="Gasquet">Richard Gasquet</a></li>
+                           <li><a class="dropdown-item" data-value="de Minaur">Alex de Minaur</a></li>
+                           <li><a class="dropdown-item" data-value="Edmund">Kyle Edmund</a></li>
+                           <li><a class="dropdown-item" data-value="Tiafoe">Frances Tiafoe</a></li>
+                           <li><a class="dropdown-item" data-value="Simon">Gilles Simon</a></li>
+                           <li><a class="dropdown-item" data-value="Kohlschreiber">Philipp Kohlschreiber</a></li>
+                           <li><a class="dropdown-item" data-value="Monfils">Gael Monfils</a></li>
+                           <li><a class="dropdown-item" data-value="Johnson">Steve Johnson</a></li>
+                           <li><a class="dropdown-item" data-value="Chardy">Jeremy Chardy</a></li>
+                           <li><a class="dropdown-item" data-value="Millman">John Millman</a></li>
+                           <li><a class="dropdown-item" data-value="Seppi">Andreas Seppi</a></li>
+                           <li><a class="dropdown-item" data-value="Klizan">Martin Klizan</a></li>
+                           <li><a class="dropdown-item" data-value="Sousa">Joao Sousa</a></li>
+                           <li><a class="dropdown-item" data-value="Fritz">Taylor Fritz</a></li>
+                           <li><a class="dropdown-item" data-value="Jarry">Nicolas Jarry</a></li>
+                           <li><a class="dropdown-item" data-value="Lajovic">Dusan Lajovic</a></li>
+                           <li><a class="dropdown-item" data-value="Jaziri">Malek Jaziri</a></li>
+                           <li><a class="dropdown-item" data-value="Herbert">Pierre-Hugues Herbert</a></li>
+                           <li><a class="dropdown-item" data-value="Ebden">Matthew Ebden</a></li>
+                           <li><a class="dropdown-item" data-value="Mannarino">Adrian Mannarino</a></li>
+                           <li><a class="dropdown-item" data-value="Fucsovics">Marton Fucsovics</a></li>
+                           <li><a class="dropdown-item" data-value="Querrey">Sam Querrey</a></li>
+                           <li><a class="dropdown-item" data-value="Mayer">Leonardo Mayer</a></li>
+                           <li><a class="dropdown-item" data-value="Chung">Hyeon Chung</a></li>
+                           <li><a class="dropdown-item" data-value="Struff">Jan-Lennard Struff</a></li>
+                           <li><a class="dropdown-item" data-value="Dzumhur">Damir Dzumhur</a></li>
+                           <li><a class="dropdown-item" data-value="Berrettini">Matteo Berrettini</a></li>
+                           <li><a class="dropdown-item" data-value="Haase">Robin Haase</a></li>
+                           <li><a class="dropdown-item" data-value="Kukushkin">Mikhail Kukushkin</a></li>
+                           <li><a class="dropdown-item" data-value="Copil">Marius Copil</a></li>
+                           <li><a class="dropdown-item" data-value="Wawrinka">Stan Wawrinka</a></li>
+                           <li><a class="dropdown-item" data-value="Paire">Benoit Paire</a></li>
+                           <li><a class="dropdown-item" data-value="Pella">Guido Pella</a></li>
+                           <li><a class="dropdown-item" data-value="Thompson">Jordan Thompson</a></li>
+                           <li><a class="dropdown-item" data-value="Gojowczyk">Peter Gojowczyk</a></li>
+                           <li><a class="dropdown-item" data-value="Lopez">Feliciano Lopez</a></li>
+                           <li><a class="dropdown-item" data-value="Kudla">Denis Kudla</a></li>
+                           <li><a class="dropdown-item" data-value="Norrie">Cameron Norrie</a></li>
+                           <li><a class="dropdown-item" data-value="Bedene">Aljaz Bedene</a></li>
+                           <li><a class="dropdown-item" data-value="Kyrgios">Nick Kyrgios</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Mischa Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="Nishioka">Yoshihito Nishioka</a></li>
+                           <li><a class="dropdown-item" data-value="Daniel">Taro Daniel</a></li>
+                           <li><a class="dropdown-item" data-value="Andreozzi">Guido Andreozzi</a></li>
+                           <li><a class="dropdown-item" data-value="Ramos-Vinolas">Albert Ramos-Vinolas</a></li>
+                           <li><a class="dropdown-item" data-value="Krajinovic">Filip Krajinovic</a></li>
+                           <li><a class="dropdown-item" data-value="Hurkacz">Hubert Hurkacz</a></li>
+                           <li><a class="dropdown-item" data-value="Carballes Baena">Roberto Carballes Baena</a></li>
+                           <li><a class="dropdown-item" data-value="Sandgren">Tennys Sandgren</a></li>
+                           <li><a class="dropdown-item" data-value="Marterer">Maximilian Marterer</a></li>
+                           <li><a class="dropdown-item" data-value="Delbonis">Federico Delbonis</a></li>
+                           <li><a class="dropdown-item" data-value="Karlovic">Ivo Karlovic</a></li>
+                           <li><a class="dropdown-item" data-value="Berdych">Tomas Berdych</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <input type="hidden" name="player1Name" id="player1Field">
+                  <input type="hidden" name="player2Name" id="player2Field">
+               </div>
+               <div class="row">
+                  <div class="col-md-6">
+                     <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle mb-2 mt-2" type="button" data-toggle="dropdown" id="winner" style="width: 100%;">Choose Winner
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <li><a class="dropdown-item" data-value="1" id="win1"></a></li>
+                           <li><a class="dropdown-item" data-value="2" id="win2"></a></li>
+                        </ul>
+                     </div>
+                     <input type="hidden" name="winner" id="winnerField" class="mb-2">
+                  </div>
+                  <div class="col-md-6">
+                     <div class="dropdown mb-2 mt-2">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" id="player3Name" data-flip="false" data-display="static" style="width: 100%">Select Next Opponent
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <input class="form-control" id="player3Input" type="text" placeholder="Search..">
+                           <li><a class="dropdown-item" data-value="TBC">TBC</a></li>
+                           <li><a class="dropdown-item" data-value="Djokovic">Novak Djokovic</a></li>
+                           <li><a class="dropdown-item" data-value="Nadal">Rafael Nadal</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Alexander Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="del Potro">Juan Martin del Potro</a></li>
+                           <li><a class="dropdown-item" data-value="Anderson">Kevin Anderson</a></li>
+                           <li><a class="dropdown-item" data-value="Federer">Roger Federer</a></li>
+                           <li><a class="dropdown-item" data-value="Nishikori">Kei Nishikori</a></li>
+                           <li><a class="dropdown-item" data-value="Thiem">Dominic Thiem</a></li>
+                           <li><a class="dropdown-item" data-value="Isner">John Isner</a></li>
+                           <li><a class="dropdown-item" data-value="Cilic">Marin Cilic</a></li>
+                           <li><a class="dropdown-item" data-value="Khachanov">Karen Khachanov</a></li>
+                           <li><a class="dropdown-item" data-value="Tsitsipas">Stefanos Tsitsipas</a></li>
+                           <li><a class="dropdown-item" data-value="Coric">Borna Coric</a></li>
+                           <li><a class="dropdown-item" data-value="Raonic">Milos Raonic</a></li>
+                           <li><a class="dropdown-item" data-value="Fognini">Fabio Fognini</a></li>
+                           <li><a class="dropdown-item" data-value="Medvedev">Daniil Medvedev</a></li>
+                           <li><a class="dropdown-item" data-value="Pouille">Lucas Pouille</a></li>
+                           <li><a class="dropdown-item" data-value="Bautista Agut">Roberto Bautista Agut</a></li>
+                           <li><a class="dropdown-item" data-value="Cecchinato">Marco Cecchinato</a></li>
+                           <li><a class="dropdown-item" data-value="Schwartzman">Diego Schwartzman</a></li>
+                           <li><a class="dropdown-item" data-value="Goffin">David Goffin</a></li>
+                           <li><a class="dropdown-item" data-value="Basilashvili">Nikoloz Basilashvili</a></li>
+                           <li><a class="dropdown-item" data-value="Busta">Pablo Carreno Busta</a></li>
+                           <li><a class="dropdown-item" data-value="Dimitrov">Grigor Dimitrov</a></li>
+                           <li><a class="dropdown-item" data-value="Shapovalov">Denis Shapovalov</a></li>
+                           <li><a class="dropdown-item" data-value="Verdasco">Fernando Verdasco</a></li>
+                           <li><a class="dropdown-item" data-value="Gasquet">Richard Gasquet</a></li>
+                           <li><a class="dropdown-item" data-value="de Minaur">Alex de Minaur</a></li>
+                           <li><a class="dropdown-item" data-value="Edmund">Kyle Edmund</a></li>
+                           <li><a class="dropdown-item" data-value="Tiafoe">Frances Tiafoe</a></li>
+                           <li><a class="dropdown-item" data-value="Simon">Gilles Simon</a></li>
+                           <li><a class="dropdown-item" data-value="Kohlschreiber">Philipp Kohlschreiber</a></li>
+                           <li><a class="dropdown-item" data-value="Monfils">Gael Monfils</a></li>
+                           <li><a class="dropdown-item" data-value="Johnson">Steve Johnson</a></li>
+                           <li><a class="dropdown-item" data-value="Chardy">Jeremy Chardy</a></li>
+                           <li><a class="dropdown-item" data-value="Millman">John Millman</a></li>
+                           <li><a class="dropdown-item" data-value="Seppi">Andreas Seppi</a></li>
+                           <li><a class="dropdown-item" data-value="Klizan">Martin Klizan</a></li>
+                           <li><a class="dropdown-item" data-value="Sousa">Joao Sousa</a></li>
+                           <li><a class="dropdown-item" data-value="Fritz">Taylor Fritz</a></li>
+                           <li><a class="dropdown-item" data-value="Jarry">Nicolas Jarry</a></li>
+                           <li><a class="dropdown-item" data-value="Lajovic">Dusan Lajovic</a></li>
+                           <li><a class="dropdown-item" data-value="Jaziri">Malek Jaziri</a></li>
+                           <li><a class="dropdown-item" data-value="Herbert">Pierre-Hugues Herbert</a></li>
+                           <li><a class="dropdown-item" data-value="Ebden">Matthew Ebden</a></li>
+                           <li><a class="dropdown-item" data-value="Mannarino">Adrian Mannarino</a></li>
+                           <li><a class="dropdown-item" data-value="Fucsovics">Marton Fucsovics</a></li>
+                           <li><a class="dropdown-item" data-value="Querrey">Sam Querrey</a></li>
+                           <li><a class="dropdown-item" data-value="Mayer">Leonardo Mayer</a></li>
+                           <li><a class="dropdown-item" data-value="Chung">Hyeon Chung</a></li>
+                           <li><a class="dropdown-item" data-value="Struff">Jan-Lennard Struff</a></li>
+                           <li><a class="dropdown-item" data-value="Dzumhur">Damir Dzumhur</a></li>
+                           <li><a class="dropdown-item" data-value="Berrettini">Matteo Berrettini</a></li>
+                           <li><a class="dropdown-item" data-value="Haase">Robin Haase</a></li>
+                           <li><a class="dropdown-item" data-value="Kukushkin">Mikhail Kukushkin</a></li>
+                           <li><a class="dropdown-item" data-value="Copil">Marius Copil</a></li>
+                           <li><a class="dropdown-item" data-value="Wawrinka">Stan Wawrinka</a></li>
+                           <li><a class="dropdown-item" data-value="Paire">Benoit Paire</a></li>
+                           <li><a class="dropdown-item" data-value="Pella">Guido Pella</a></li>
+                           <li><a class="dropdown-item" data-value="Thompson">Jordan Thompson</a></li>
+                           <li><a class="dropdown-item" data-value="Gojowczyk">Peter Gojowczyk</a></li>
+                           <li><a class="dropdown-item" data-value="Lopez">Feliciano Lopez</a></li>
+                           <li><a class="dropdown-item" data-value="Kudla">Denis Kudla</a></li>
+                           <li><a class="dropdown-item" data-value="Norrie">Cameron Norrie</a></li>
+                           <li><a class="dropdown-item" data-value="Bedene">Aljaz Bedene</a></li>
+                           <li><a class="dropdown-item" data-value="Kyrgios">Nick Kyrgios</a></li>
+                           <li><a class="dropdown-item" data-value="Zverev">Mischa Zverev</a></li>
+                           <li><a class="dropdown-item" data-value="Nishioka">Yoshihito Nishioka</a></li>
+                           <li><a class="dropdown-item" data-value="Daniel">Taro Daniel</a></li>
+                           <li><a class="dropdown-item" data-value="Andreozzi">Guido Andreozzi</a></li>
+                           <li><a class="dropdown-item" data-value="Ramos-Vinolas">Albert Ramos-Vinolas</a></li>
+                           <li><a class="dropdown-item" data-value="Krajinovic">Filip Krajinovic</a></li>
+                           <li><a class="dropdown-item" data-value="Hurkacz">Hubert Hurkacz</a></li>
+                           <li><a class="dropdown-item" data-value="Carballes Baena">Roberto Carballes Baena</a></li>
+                           <li><a class="dropdown-item" data-value="Sandgren">Tennys Sandgren</a></li>
+                           <li><a class="dropdown-item" data-value="Marterer">Maximilian Marterer</a></li>
+                           <li><a class="dropdown-item" data-value="Delbonis">Federico Delbonis</a></li>
+                           <li><a class="dropdown-item" data-value="Karlovic">Ivo Karlovic</a></li>
+                           <li><a class="dropdown-item" data-value="Berdych">Tomas Berdych</a></li>
+                        </ul>
+                     </div>
+                  </div>
+                  <input type="hidden" name="player3Name" id="player3Field">
+               </div>
+               <div class="row" style="padding-top: 20px;">
+                  <div class="col-md-8" id="match_date_div">
+                     <h5>Match Date:</h5>
+                     <label for="match_date">Format: 'DD Month' or 'Today' or 'Tomorrow'</label>
+                     <input type="text" id="match_date" name="match_date" placeholder="Match Date" class="mb-2" style="width: 75%">
+                  </div>
+               </div>
+               <input type="hidden" name="player2Field" id="player2Field">
+               <!-- is player2Field needed? -->
+               <!--HEAD TO HEAD ENDS-->
+               <!--SET SCORES-->
+               <div class="row" id="setScores">
+                  <div class="col-md-12">
+                     <label>
+                        <h5>Set scores (e.g. 6-4):</h5>
+                     </label>
+                  </div>
+                  <div class="col-md-4">
+                     <input type="text" id="set_1" class="setScore mb-2" placeholder="Set 1 Score" maxlength="3" style="width: 100%;">
+                  </div>
+                  <div class="col-md-4">
+                     <input type="text" id="set_2" class="setScore mb-2" placeholder="Set 2 Score" maxlength="3" style="width: 100%;" disabled>
+                  </div>
+                  <div class="col-md-4">
+                     <input type="text" id="set_3" class="setScore mb-2" placeholder="Set 3 Score" maxlength="3" style="width: 100%;" disabled>
+                  </div>
+                  <input type="hidden" id="set_scores" name="set_scores">
+               </div>
+               <!--SET SCORES ENDS-->
+               <!--WINNER-->
+               <div class="row" id="statsTemplate" style="padding-top: 20px;">
+                  <div class="col-md-12">
+                     <label>
+                        <h5>Stats:</h5>
+                     </label>
+                  </div>
+                  <div class="col-md-4">
+                     <input type="text" id="aces" name="aces" placeholder="Aces" class="mb-2" style="width: 100%;">
+                  </div>
+                  <div class="col-md-4">
+                     <input type="text" id="unforced_errors" name="unforced_errors" placeholder="Unforced Errors" style="width: 100%;">
+                  </div>
+                  <div class="col-md-4">
+                  </div>
+               </div>
+               <!--WINNER ENDS-->
+               <!--POST MATCH STATS-->
+               <div id="postMatchStats">
+                  <div class="row" style="padding-top: 20px;">
+                     <div class="col-md-12" id="duration_label">
+                        <label>
+                           <h5>Match Duration:</h5>
+                        </label>
+                     </div>
+                     <div class="col-md-6">
+                        <!--<input type="text" id="match_duration" name="match_duration"  placeholder="match_duration" class="mb-2">-->
+                        <input type="text" id="hours" class="time mb-2" placeholder="Hours" maxlength="2" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <input type="text" id="minutes" class="time mb-2" placeholder="Minutes" maxlength="2" style="width: 100%;">
+                     </div>
+                     <input type="hidden" name="match_duration" id="match_duration">
+                  </div>
+                  <div class="row" id="stats_labels" style="padding-top: 20px;">
+                     <div class="col-md-6">
+                        <label>
+                           <h5>Player 1 Stats:</h5>
+                        </label>
+                     </div>
+                     <div class="col-md-6">
+                        <label>
+                           <h5>Player 2 Stats:</h5>
+                        </label>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Aces:</label>
+                        <input type="text" id="player1_aces"  name="player1_aces"  placeholder="Player 1 Aces" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <label>&nbsp;</label>
+                        <input type="text" id="player2_aces" name="player2_aces" placeholder="Player 2 Aces" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>First Serve Winners:</label>
+                        <input type="text" id="player1_first_serve_winners" name="player1_first_serve_winners"  placeholder="Player 1 First Serve Winners" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <label>&nbsp;</label>
+                        <input type="text" id="player2_first_serve_winners" name="player2_first_serve_winners"  placeholder="Player 2 First Serve Winners" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Break Points Saved:</label>
+                        <input type="text" id="player1_break_points_served" name="player1_break_points_served" placeholder="Player 1 Break Points Saved" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <label>&nbsp;</label>
+                        <input type="text" id="player2_break_points_served" name="player2_break_points_served"  placeholder="Player 2 Break Points Saved" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Break Points Converted:</label>
+                        <input type="text" id="player1_break_points_converted" name="player1_break_points_converted"  placeholder="Player 1 Break Points Converted" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <label>&nbsp;</label>
+                        <input type="text" id="player2_break_points_converted" name="player2_break_points_converted"  placeholder="Player 2 Break Points Converted" class="mb-2" maxlength="2" style="width: 100%;">
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-md-6">
+                        <label>Total Points Won:</label>
+                        <input type="text" id="player1_total_points_won" name="player1_total_points_won"  placeholder="Player1 Total Points Won" class="mb-2" maxlength="3" style="width: 100%;">
+                     </div>
+                     <div class="col-md-6">
+                        <label>&nbsp;</label>
+                        <input type="text" id="player2_total_points_won" name="player2_total_points_won"  placeholder="Player 2 Total Points Won" class="mb-2" maxlength="3" style="width: 100%;">
+                     </div>
+                  </div>
+                  <div class="row" style="padding-top: 20px;">
+                     <div class="col-md-6">
+                        <input type="text" id="winner_faces" name="winner_faces"  placeholder="Winner faces" style="width: 100%;">
+                     </div>
+                  </div>
+               </div>
+               <div class="row" style="padding-top: 20px;">
+                  <div class="col-md-4">
+                     <button type="submit" class="btn btn-success" id="submit_button" style="width: 100%;" disabled>Submit</button>
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="mb-2">
+                        <p>
+                           <span id="error_message" style="color:#dc3545"></span>
+                        </p>
+                     </div>
+                  </div>
+               </div>
             </div>
-            <div class="col-md-6" style="text-align: right;">
+            <div class="col-md-6" style="text-align: left;">
                <div class="formPreviewArea" style="width: 100%">
-                  <h2 id="templateTypePreview"></h2>
+                  <h5 id="templateTypePreview"><p> Welcome to the Amazon Prime ATP Championship Dyanmic Content Builder.</p><p> Please select a template to begin building creative.</p> <p> If you encounter any issues, please contact Ben Platten or Rich Page.</p> </h5>
                </div>
             </div>
          </div>
@@ -298,6 +484,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
       <script>
+         var mdComplete = false;
+         var ssComplete = false;
+         var mtComplete = false;
          $(document).ready(function(){
            $("#player1Input").on("keyup", function() {
              var value = $(this).val().toLowerCase();
@@ -312,113 +501,266 @@
                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
              });
            });
+         });
          
-             });
+         //update text and values in dropdown menus
+         $(".dropdown-menu a").click(function(){
+            $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+            $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+            switch ($(this).parents(".dropdown").find('.btn').attr("id")){
+               case "player1Name":
+                  $("#player1Field").val($("#player1Name").val());
+                  $("#win1").text($(this).data('value'));
+                  break;
+               case "player2Name":
+                  $("#player2Field").val($("#player2Name").val());
+                  $("#win2").text($(this).data('value'));
+                  break;
+               case "player3Name":
+                  $("#player3Field").val($("#player3Name").val());
+                  $("#win3").text($(this).data('value'));
+                  break;
+               case "winner":
+                  $("#winnerField").val($("#winner").val());
+                  break;
+               }
+            checkForm();
+         });
          
-             //update text and values in dropdown menus
-             $(".dropdown-menu a").click(function(){
-               $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
-               $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
          
-               switch ($(this).parents(".dropdown").find('.btn').attr("id")){
-         case "player1Name":
-         $("#player1Field").val($("#player1Name").val());
-         break;
-         case "player2Name":
-         $("#player2Field").val($("#player2Name").val());
-         break;
-         }
-             });
-         
-           function hide_fields(){
+         function hide_fields(){
          
            $('#flashMessage').hide();
+           $('#playersLabel').hide();
            $('#player1Name').hide();
            $('#player2Name').hide();
-           $('#set_1').hide();
-           $('#set_2').hide();
-           $('#set_3').hide();
-           $('#aces').hide();
-           $('#unforced_errors').hide();
+           $('#player3Name').hide();
+           $('#setScores').hide();
+           $('#statsTemplate').hide();
            $('#winner').hide();
-           $('#match_duration').hide();
-           $('#player1_aces').hide();
-           $('#player2_aces').hide();
-           $('#player1_first_serve_winners').hide();
-           $('#player2_first_serve_winners').hide();
-           $('#player1_break_points_served').hide();
-           $('#player2_break_points_served').hide();
-           $('#player1_break_points_converted').hide();
-           $('#player2_break_points_converted').hide();
-           $('#player1_total_points_won').hide();
-           $('#player2_total_points_won').hide();
-           }
+           $('#match_date_div').hide();
+           $('#hours').hide();
+           $('#minutes').hide();
+           $('#duration_label').hide();
+           $('#stats_labels').hide();
+           $('#postMatchStats').hide();
+           $('#winner_faces').hide();
+           $('#submit_button').hide();
+           
+         }
          
-           hide_fields();      
-
-              $(".setScore").on("keyup", function(){
-      var value = $(this).val().toLowerCase();
-      var reg = /\d-\d/;
-      console.log(reg.test(value));
-      if(!reg.test(value)){
-        $("#submit_button").attr("disabled", "disabled");
-      }else{
-        $("#submit_button").removeAttr("disabled");
-        var scores = $("#set_1").val();
-        if($("#set_2").val() != ""){
-          scores += " " + $("#set_2").val();
-        }
-        if($("#set_3").val() != ""){
-          scores += " " + $("#set_3").val();
-        }
-        $("#set_scores").val(scores);
-      }
-    });   
-            
-           $('#template_type').change(function(){
-             hide_fields();
-             const template_type = $('#template_type').val();
+         hide_fields();      
+         
+         $(".setScore").on("change", function(){
+            var value = $(this).val().toLowerCase();
+            var reg = /\d-\d/;
+            if(!reg.test(value)){
+               $("#submit_button").attr("disabled", "disabled");
+               $("#error_message").text('Set score must be in format X-X');
+               ssComplete = false;
+            }else{
+               $("#error_message").text("");
+               var scores = $("#set_1").val();
+               if($("#set_2").val() != ""){
+                  scores += " " + $("#set_2").val();
+               }
+               if($("#set_3").val() != ""){
+                  scores += " " + $("#set_3").val();
+               }
+               $("#set_scores").val(scores);
+               ssComplete = true;
+            }
+         });
+         
+         $(".setScore").on("keyup", function(){
+            var value = $(this).val().toLowerCase();
+            var reg = /\d-\d/;
+            if(reg.test(value)){
+               //$("#submit_button").removeAttr("disabled");
+               $("#error_message").text("");
+               ssComplete = true;
+               var scores = $("#set_1").val();
+               $("#set_2").removeAttr("disabled");
+               if($("#set_2").val() != ""){
+                  scores += " " + $("#set_2").val();
+                  $("#set_3").removeAttr("disabled");
+               }
+               if($("#set_3").val() != ""){
+                  scores += " " + $("#set_3").val();
+               }
+               $("#set_scores").val(scores);
+            }else{
+         
+            }
+         });
+         
+         
+         $("#match_date").on("change",function(){
+            var value = $(this).val().toUpperCase();
+            var reg = /^\d{1,2} (MARCH|APRIL)|^TOMORROW|^TODAY/;
+         
+            if(!reg.test(value)){
+               $("#error_message").text('Match date must be one of "Today", "Tomorrow" or in the format DD MONTH');
+               $("#submit_button").attr("disabled", "disabled");
+               mdComplete = false;
+            }else{
+               //$("#submit_button").removeAttr("disabled");
+               $("#error_message").text("");
+               mdComplete = true;
+            }
+         
+         });
+         
+         $("#match_date").on("keyup",function(){
+            var value = $(this).val().toUpperCase();
+            var reg = /^\d{1,2} (MARCH|APRIL)|^TOMORROW|^TODAY/;
+         
+            if(reg.test(value)){
+               //$("#submit_button").removeAttr("disabled");
+               $("#error_message").text("");
+               mdComplete = true;
+            }
+         
+         });
+         
+         $(".time").on("change",function(){
+            var value = $(this).val().toUpperCase();
+            var reg = /^\d{1,2}/;
+         
+            if(!reg.test(value)){
+               $("#error_message").text('Match duration must be a number');
+               $("#submit_button").attr("disabled", "disabled");
+               mtComplete = false;
+            }else{
+               var hours = $("#hours").val();
+               var mins  = $("#minutes").val();
+               if(mins == ""){
+                  mins = 0;
+               }
+               $("#match_duration").val(hours + "h " + mins + "m");
+               //$("#submit_button").removeAttr("disabled");
+               $("#error_message").text("");
+               mtComplete = true;
+            }
+         
+         });
+         
+         $('#template_type').change(function(){
+            hide_fields();
+            $('#submit_button').attr("disabled", "disabled");
+            $('#submit_button').show();
+            const template_type = $('#template_type').val();
               
-                if (template_type == 1){
+            if (template_type == 1){
+               $('#error_message').text("");
                $(".formPreviewArea").html('<img src="static/01 PvP.png" width= "100%" height="auto">');
+               $('#playersLabel').show();
                $('#player1Name').show();
                $('#player2Name').show();
-              } 
-                else if (template_type == 2){
-               $(".formPreviewArea").html('<img src="static/02 Set Scores.png" width= "100%" height="auto">');
-               $('#player1Name').show();
-               $('#player2Name').show();
-               $('#set_1').show();
-               $('#set_2').show();
-               $('#set_3').show();
-              }
-                else if (template_type == 3){
-               $(".formPreviewArea").html('<img src="static/03 Winner.png" width= "100%" height="auto">');
-               $('#player1Name').show();
-               $('#player2Name').show();
-               $('#set_1').show();
-               $('#set_2').show();
-               $('#set_3').show();
-               $('#aces').show();
-               $('#unforced_errors').show();
-              }
-                else if (template_type == 4){
-               $(".formPreviewArea").html('<img src="static/ATP_Static_Stats.png" width= "100%" height="auto">');
-               $('#winner').show();
-               $('#match_duration').show();
-               $('#player1_aces').show();
-               $('#player2_aces').show();
-               $('#player1_first_serve_winners').show();
-               $('#player2_first_serve_winners').show();
-               $('#player1_break_points_served').show();
-               $('#player2_break_points_served').show();
-               $('#player1_break_points_converted').show();
-               $('#player2_break_points_converted').show();
-               $('#player1_total_points_won').show();
-               $('#player2_total_points_won').show();
-              }
+               $('#match_date_div').show();
          
-              });
+            }else if (template_type == 2){
+               $('#error_message').text("");
+               $(".formPreviewArea").html('<img src="static/02 Set Scores.png" width= "100%" height="auto">');
+               $('#playersLabel').show();
+               $('#player1Name').show();
+               $('#player2Name').show();
+               $('#setScores').show();
+            }else if (template_type == 3){
+               $('#error_message').text("");
+               $(".formPreviewArea").html('<img src="static/03 Winner.png" width= "100%" height="auto">');
+               $('#playersLabel').show();
+               $('#player1Name').show();
+               $('#player2Name').show();
+               $('#winner').show();
+               $('#setScores').show();
+               $('#statsTemplate').show();
+            }else if (template_type == 4){
+               $('#error_message').text("");
+               $(".formPreviewArea").html('<img src="static/04 Stats.png" width= "100%" height="auto">');
+               $('#playersLabel').show();
+               $('#winner').show();
+               $('#player1Name').show();
+               $('#player2Name').show();
+               $('#duration_label').show();
+               $('#hours').show();
+               $('#minutes').show();
+               $('#setScores').show();
+               $('#stats_labels').show();
+               $('#postMatchStats').show();
+               $('#player3Name').show();
+            }else if (template_type == 0){
+               $(".formPreviewArea").html('<h5 id="templateTypePreview"><p> Welcome to the Amazon Prime ATP Championship Dyanmic Content Builder.</p><p> Please select a template to begin building creative.</p> <p> If you encounter any issues, please contact Ben Platten or Rich Page.</p> </h5>');
+            }
+         
+         });
+         
+         function checkForm(){
+            var p1 = $('#player1Field').val();
+            var p2 = $('#player2Field').val();
+            if($('#template_type').val()==1){
+               if(p1 != "" && p2 != "" && mdComplete == true){
+                  console.log("hello");
+                  $('#submit_button').removeAttr("disabled");
+                  $('#error_message').text("");
+               }
+            }else if($('#template_type').val()==2){
+               if(p1 != "" && p2 != "" && ssComplete == true){
+                  $('#submit_button').removeAttr("disabled");
+                  $('#error_message').text("");
+               }
+            }else if($('#template_type').val()==3){
+               if(p1 != "" && p2 != "" && $('#aces').val() != "" && $('#unforced_errors').val() != "" && $('#winner').val() != ""){
+                  $('#submit_button').removeAttr("disabled");
+                  $('#error_message').text("");
+               }
+            }else if($('#template_type').val()==4){
+               if(p1 != "" && p2 != "" && mtComplete == true && $('#player3Field').val() != "" && $('#winner').val() != "" && $('#player1_aces').val() != "" && $('#player2_aces').val() != "" && $('#player1_first_serve_winners').val() != "" && $('#player2_first_serve_winners').val() != "" && $('#player1_break_points_served').val() != "" && $('#player2_break_points_served').val() != "" && $('#player1_break_points_converted').val() != "" && $('#player2_break_points_converted').val() != "" && $('#player1_total_points_won').val() != "" && $('#player2_total_points_won').val() != "" ){
+                  $('#submit_button').removeAttr("disabled");
+                  $('#error_message').text("");
+               }
+            }
+         }
+         
+         $('input').on('change', function(){
+            checkForm();
+         });
+         $('input').on('focusout', function(){
+            checkForm();
+         });
+         
+         $('input').on('focus', function(){
+            $('#submit_button').attr("disabled", "disabled");
+         });
+         
+         (function($) {
+           $.fn.inputFilter = function(inputFilter) {
+             return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+               if (inputFilter(this.value)) {
+                 this.oldValue = this.value;
+                 this.oldSelectionStart = this.selectionStart;
+                 this.oldSelectionEnd = this.selectionEnd;
+               } else if (this.hasOwnProperty("oldValue")) {
+                 this.value = this.oldValue;
+                 this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+               }
+             });
+           };
+         }(jQuery));
+         
+         $('#player1_aces').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player2_aces').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player1_first_serve_winners').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player2_first_serve_winners').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player1_break_points_served').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player2_break_points_served').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player1_break_points_converted').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player2_break_points_converted').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player1_total_points_won').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#player2_total_points_won').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#aces').inputFilter(function(value){return /^\d*$/.test(value); })
+         $('#unforced_errors').inputFilter(function(value){return /^\d*$/.test(value); })
+         
                     
          
       </script>

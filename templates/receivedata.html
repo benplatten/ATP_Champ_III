@@ -1,6 +1,59 @@
 <html lang="en">
+<head>      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+</head>
 <body>
-<img src="{{ data }}" />
+         <div class="row" style="background-color: #542c90;">
+            <div class="col-xs-12 mx-auto p-3 mb-2" style="background-color: #542c90; color: white; font-family: Arial;">
+               <h4><strong>REPRISE DYNAMIC CONTENT BUILDER</strong></h4>
+               <p class="lead">Amazon Prime ATP Championship</p>
+
+            </div>
+         </div>
+               <div class="row" >
+                  <div class="col-md-12" >
+
+                  </div>
+                  <div class="col-md-3" >
+                  	<div style="width: 100%">
+
+                  	</div>
+
+                  </div>
+                  <div class="col-md-6">
+						<img src="{{ data }}"  class="mb-2" style='height: 100%; width: 100%; object-fit: contain'/>
+                  </div>
+                  <div class="col-md-3" >
+                  		<div style="width: 100%">
+ 
+                  	</div>
+                  </div>
+
+               </div>
+                            <div class="row" id="setScores">
+                  <div class="col-md-12" >
+
+                  </div>
+                  <div class="col-md-3" style="width: 100%">
+
+                  </div>
+                  <div class="col-md-6" >
+							<a href="{{ data }}" download="{{ data }}" class="mb-2 ml-2">
+								<button type="button" class="btn btn-outline-success">Download!
+							</button>
+							</a>
+							<a href="{{ url_for('home') }}" class="mb-2 ml-2">
+								<button type="button" class="btn btn-outline-primary" >Home
+							</button>
+							</a>
+                  </div>
+                  <div class="col-md-3" style="width: 100%">
+
+                  </div>
+
+               </div>          
+
+
+
 
 </body>
 </html>
